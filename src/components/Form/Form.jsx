@@ -23,10 +23,10 @@ const Form = () => {
             text: "Отправить данные"
         })
 
-        tg.WebApp.onEvent("mainButtonClicked", onSendData)
+        tg.onEvent("mainButtonClicked", onSendData)
 
         return () => {
-            tg.WebApp.offEvent("mainButtonClicked", onSendData)
+            tg.offEvent("mainButtonClicked", onSendData)
         }
     }, [])
 
