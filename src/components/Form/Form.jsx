@@ -19,15 +19,17 @@ const Form = () => {
     }, [country, city, subject])
 
     useEffect(() => {
-        tg.MainButton.setParams({
-            text: "Отправить данные"
-        })
-
         tg.onEvent("mainButtonClicked", onSendData)
 
         return () => {
             tg.offEvent("mainButtonClicked", onSendData)
         }
+    }, [onSendData()])
+
+    useEffect(() => {
+        tg.MainButton.setParams({
+            text: "Отправить данные"
+        })
     }, [])
 
     useEffect(() => {
