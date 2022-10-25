@@ -31,7 +31,7 @@ const ProductList = () => {
             queryId,
         }
 
-        fetch("https://tg-bot-alex-test-1.herokuapp.com", {
+        fetch("https://tg-bot-alex-test-1.herokuapp.com/web-data", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",
